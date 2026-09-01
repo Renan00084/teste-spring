@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Lista de Usuários</title>
@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="container pt-3">
-        <button type="button" class="btn btn-primary float-end">Novo Usuário</button>
-        <h1>Olá Lista de Usuários</h1>
+        <button type="button" class="btn btn-outline-primary float-end" data-bs-toggle="button">Novo Usuário</button>
+        <h1>Olá Usuários (<td th:text="${size}"></td>)</h1>
         <hr>
         <table class="table">
             <thead>
