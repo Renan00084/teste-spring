@@ -6,6 +6,10 @@ public class User {
     private String arroba;
     private int cpf, cont;
 
+    public User (){
+
+    }
+
     public User(Long id, String name, String arroba, int cpf){
         this.id = id;
         this.arroba = arroba;

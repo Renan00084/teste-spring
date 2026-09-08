@@ -14,14 +14,17 @@ public class UserController{
     private List<User> listUser = new ArrayList<User>();
     @GetMapping("/index")
     public String index(ModelMap model){
+        listUser.clear();
         listUser.add(new User(1L, "Renan", "@renan00084", 119));
+        model.addAttribute("users", listUser);
         model.addAttribute("size", listUser.size()); //no template tem que estar igual ao nome que está entre aspas no comando
         return "users/index";
     }
 
-    @GetMapping("/new")
-    public String novo(){
-        return "new";
+    @GetMapping("novo")
+    public String novo(ModelMap model){
+        model.addAttribute("user", new User());
+        return "users/novo";
 
     }
 
