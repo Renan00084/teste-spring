@@ -1,16 +1,16 @@
 package com.renan.teste_spring.model;
 
 public class User {
-    private Long id;
+    private int id;
     private String name;
     private String arroba;
-    private int cpf, cont;
+    private String cpf;
 
     public User (){
 
     }
 
-    public User(Long id, String name, String arroba, int cpf){
+    public User(int id, String name, String arroba, String cpf){
         this.id = id;
         this.arroba = arroba;
         this.name = name;
@@ -18,11 +18,11 @@ public class User {
 
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -38,11 +38,11 @@ public class User {
         this.arroba = arroba;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
