@@ -1,7 +1,7 @@
 package com.renan.teste_spring.model;
 
 public class User {
-    private int id;
+    private long id;
     private String name;
     private String arroba;
     private String cpf;
@@ -10,7 +10,7 @@ public class User {
 
     }
 
-    public User(int id, String name, String arroba, String cpf){
+    public User(long id, String name, String arroba, String cpf){
         this.id = id;
         this.arroba = arroba;
         this.name = name;
@@ -22,7 +22,7 @@ public class User {
         return cpf;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -42,7 +42,7 @@ public class User {
         this.cpf = cpf;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
