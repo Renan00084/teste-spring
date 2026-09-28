@@ -76,5 +76,14 @@ public class UserController {
         model.addAttribute("user", userShow);
         return "/users/show";
     }
+
+    @GetMapping("/delete/{id}")
+    public String deleteUser(@PathVariable Long id) {
+        int idInt = Math.toIntExact(id -1L);
+        listUser.remove(idInt);
+
+        return "redirect:/users/index";
+
+    }
 }
 
